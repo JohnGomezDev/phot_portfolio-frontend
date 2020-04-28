@@ -1,0 +1,36 @@
+#blog-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#blog-container article {
+    padding: 20px;
+}
+
+article h2, article hr {
+    color: var(--purple);
+}
+
+article h2 {
+    margin-bottom: 10px;
+}
+
+article p {
+    color: var(--letter);
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* LAPTOP *************/
+@media screen and (min-width: 1200px) {
+
+    #blog-container {
+        max-height: 100%;
+        overflow: auto;
+    }
+
+    #blog-container article {
+        padding: 30px;
+    }
+}

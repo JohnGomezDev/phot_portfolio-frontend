@@ -1,1 +1,231 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.current {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+:root {
+    --purple: #2b0722; 
+    --letter: #585757;
+}
+
+.purple {
+    background-color: var(--purple);
+}
+
+.main-container {
+    /* border: 1px solid red; */
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 190px minmax(400px, auto) 80px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--purple);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header .btn-menu {
+    background-color: #fff;
+    border-radius: 99px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: -13.9px;
+    top: -14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .btn-menu span {
+    color: var(--purple);
+    font-weight: 600;
+    margin-right: 5px;
+    border-top: 6px solid var(--purple);
+    border-bottom: 6px solid var(--purple);
+
+}
+
+header .logo-box h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+header .logo-div {
+    margin-bottom: 20px;
+    height: 80px;
+    width: 50%;
+    background-image: url(./assets/images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .logo-box h1, header .extra-text-box p {
+    color: #fff;
+}
+
+header .extra-text-box p {
+    width: 90%;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+header .media-header {
+    display: none;
+}
+
+/* NAV */
+header nav {
+    display: none;
+    background-color: #0e020b;
+    height: 98%;
+    width: 40%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid var(--purple);
+    margin: 20px 0;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    color: #aaa;
+    transition: 300ms all;
+}
+
+
+/* FOOTER */
+footer .media-box {
+    height: 75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .media-box span {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 7px;
+}
+
+footer .rights {
+    height: 25%;
+    background-color: #0e020b;
+    color: #ccc;
+    font-size: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LAPTOP */
+@media screen and (min-width: 1200px) {
+    .main-container {
+        grid-template-rows: minmax(100%, auto);
+        grid-template-columns: 40% 60%;
+    }
+
+    /* HEADER */
+    header {
+        justify-content: center;
+        padding: 30px;
+    }
+
+    header .logo-box {
+        position: absolute;
+        width: 35%;
+    }
+
+    header .logo-box h1 {
+        font-size: 70px;
+    }
+
+    header .logo-div {
+        height: 150px;
+    }
+
+    header .extra-text-box {
+        margin-top: 10px;
+    }
+
+    header .extra-text-box p {
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        color: #ccc;
+    }
+
+    header .media-header {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    header .media-header a {
+        color: #ccc ;
+        margin: 0 10px;
+        font-size: 30px;
+    }
+
+    /* NAV */
+    header .btn-menu {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        height: 5%;
+        width: 40%;
+    }
+
+    header nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header nav ul li a {
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    /* MAIN */
+    main {
+        max-height: 100vh;
+    }
+
+    /* FOOTER */
+    footer {
+        display: none;
+    }
+}

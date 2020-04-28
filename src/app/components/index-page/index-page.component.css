@@ -1,0 +1,65 @@
+.index-container {
+    /* border: 1px solid red; */
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(2, 50%);
+}
+
+.index-container .pic-1, .index-container .pic-2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: round;
+}
+
+.index-container .pic-1 {
+    background-image: url(../../../assets/images/chica2.jpg);
+}
+
+.index-container .pic-2 {
+    background-image: url(../../../assets/images/chica3.jpg);
+}
+
+.index-container .section {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.index-container .section h3 {
+    color: var(--purple);
+}
+
+.index-container .section p {
+    color: var(--letter);
+    font-size: 11px;
+}
+
+.index-container .section .see-more-box a {
+    color: var(--letter);
+    font-weight: bold;
+}
+
+/* TABLET **************/
+@media screen and (min-width: 700px) {
+
+    .index-container .section h3 {
+        font-size: 25px;
+    }
+
+    .index-container .section {
+        padding: 30px;
+    }
+
+    .index-container .section p {
+        font-size: 15px;
+    }
+    
+    .index-container .section .see-more-box a {
+        font-size: 18px;
+    }
+    
+}
