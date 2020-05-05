@@ -1,49 +1,14 @@
 <div id="blog-container">
-    <article>
-        <h2>Test Title</h2>
+    <div *ngIf="!postsList" class="charge-box">
+        <div  class="charge">
+            <div class="_90deg"></div>
+        </div>
+        <span>Cargando...</span>
+    </div>
+    <article *ngFor="let post of postsList">
+        <h2>{{post.title}}</h2>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-        </p>
-        <hr>
-    </article>
-    <article>
-        <h2>Test Title</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-        </p>
-        <hr>
-    </article>
-    <article>
-        <h2>Test Title</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-        </p>
-        <hr>
-    </article>
-    <article>
-        <h2>Test Title</h2>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis deserunt adipisci vitae
-            praesentium a, rerum ipsa eligendi quasi? Quos at cumque eius atque laborum alias doloremque
-            repellat soluta voluptatibus iste.
+           {{post.content}}
         </p>
         <hr>
     </article>

@@ -1,1 +1,22 @@
-<p>contact-page works!</p>
+<div id="contact-container">
+    <form #contact="ngForm" (ngSubmit)="onSubmit(contact)">
+        <div class="succes" *ngIf="sent">Mensaje enviado correctamente</div>
+        <p>
+            <input type="text" #name="ngModel" ngModel name="name" placeholder="Nombre" required pattern=".[a-zA-Z ]+">
+            <span class="error" *ngIf="name.touched && name.invalid">Ingresa un nombre valido</span>
+        </p>
+        <p>
+            <input type="text" #phone="ngModel" ngModel name="phone" placeholder="Teléfono" required pattern=".[0-9]+" minlength="7" maxlength="10">
+            <span class="error" *ngIf="phone.touched && phone.invalid">Ingresa un teléfono valido</span>
+        </p>
+        <p>
+            <input type="email" #email="ngModel" ngModel name="email" placeholder="Correo" required>
+            <span class="error" *ngIf="email.touched && email.invalid">Ingresa un correo valido</span>
+        </p>
+        <p>
+            <textarea name="message" #message="ngModel" ngModel placeholder="Mensaje" required></textarea>
+            <span class="error" *ngIf="message.touched && message.invalid">Rellena este campo*</span>
+        </p>
+        <input type="submit" value="{{btnText}}" [disabled]="contact.form.invalid || isSending">
+    </form>
+</div>

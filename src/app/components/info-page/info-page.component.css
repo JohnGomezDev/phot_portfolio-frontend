@@ -1,0 +1,55 @@
+#info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#info-container article {
+    padding: 20px;
+}
+
+article p {
+    color: var(--letter);
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+article .img-wrapper {
+    width: 70%;
+    margin: 30px auto;
+}
+
+article .img-wrapper-life {
+    width: 100%;
+    margin: 30px auto;
+}
+
+
+article .img-wrapper img, article .img-wrapper-life img {
+    max-width: 100%;
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+/* BREAKPOINT 1 */
+@media screen and (min-width: 1200px) {
+
+    #info-container article {
+        padding: 20px;
+    }
+    
+    article p {
+        padding: 0 70px;
+        font-size: 17px;
+        margin-top: 80px;
+    }
+
+    article .img-wrapper {
+        width: 50%;
+        margin: 30px auto;
+    }
+
+    article .img-wrapper-life {
+        width: 60%;
+        margin: 20px auto;
+    }
+}

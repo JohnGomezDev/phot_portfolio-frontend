@@ -1,0 +1,136 @@
+#contact-container {
+    background-image: url(../../../assets/images/arboles.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-container form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: auto;
+    margin: 20px 0;
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form p {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+form p textarea, form p input {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 0;
+    max-width: 100%;
+}
+
+form p input:focus, form p textarea:focus {
+    border-bottom: 2px solid #4bb1e07e;
+}
+
+form p textarea {
+    height: 100px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--letter);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+form input[type="submit"] {
+    margin: 10px 0;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #009f3c;
+    color: #fff;
+
+    transition: 300ms all;
+}
+
+form input[type="submit"]:disabled {
+    cursor: not-allowed;
+    color: #aaa;
+    background-color: #ccc;
+}
+
+form .error {
+    color: #b32727;
+    font-size: 11px;
+}
+
+form .succes {
+    background-color: #009f3c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+
+    position: relative;
+    bottom: 10px;
+}
+
+/* BREAKPOINT 1 */
+@media screen and (min-width: 600px) {
+
+    #contact-container form {
+        height: auto;
+    }
+
+    form p {
+        margin: 30px;
+    }
+
+    form p textarea, form p input {
+        width: 100%;
+    }
+
+    form input[type="submit"] {
+        font-size: 17px;
+    }
+}
+
+/* BREAKPPOINT 2 */
+@media screen and (min-width: 1200px) {
+
+    #contact-container form {
+        width: 70%;
+        height: auto;
+    }
+
+    form p {
+        margin: 20px;
+    }
+
+    form p textarea, form p input, input::placeholder, textarea::placeholder {
+        font-size: 17px;
+    }
+
+    form input[type="submit"] {
+        cursor: pointer;
+        margin: 20px 0;
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #04d454;
+    }
+
+    form .succes {
+        position: initial;
+        font-size: 20px;
+    }
+}

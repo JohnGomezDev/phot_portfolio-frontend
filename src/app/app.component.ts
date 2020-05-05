@@ -38,22 +38,21 @@ export class AppComponent implements OnInit {
     });
   }
 
-  // Cambia el titulo de acuerdo a la seccion a la que se navegue
-  setTitle(title:string): void {
-    this._titleService.setTitle(title);
-    this.title = this._titleService.getTitle();
-  }
-
   /* Da valor al titulo al recargar la pagina o iniciar por primera vez, de modo que evita
   poner el titulo por defecto */
   setTitleAtStart() {
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd) {
-        let sectionName = event.url.split('/')[1];
-        this._titleService.setTitle(sectionName);
+
+        let sectionName = event.url.split('/');
+        
+        if (sectionName[1] != 'info') { //evitar poner 'info' en el titulo cuando entro a sobre mi o goodlife
+          this._titleService.setTitle(sectionName[1]);
+        } else {
+          this._titleService.setTitle(sectionName[2].replace('-', ' '));
+        }
 
         this.title = this._titleService.getTitle();
-
         this.animateTitleAndMain(); //animacion
       }
     });
@@ -65,7 +64,7 @@ export class AppComponent implements OnInit {
             top: ['60%', '30%'],
             opacity: [0,1],
             easing: 'easeOutExpo',
-            duration: 1800,
+            duration: 1500,
             delay: 200,
             offset: '-=1600'
         });
@@ -74,7 +73,7 @@ export class AppComponent implements OnInit {
           targets: 'main',
           opacity: [0, 1],
           easing: 'easeOutExpo',
-          duration: 2300,
+          duration: 1600,
           delay: 200,
           offset: '-=1600'
         });

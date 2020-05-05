@@ -7,6 +7,7 @@ import { BlogPageComponent } from './components/blog-page/blog-page.component';
 import { GalleryPageComponent } from './components/gallery-page/gallery-page.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { InfoPageComponent } from './components/info-page/info-page.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/inicio', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     {path: 'blog', component: BlogPageComponent},
     {path: 'galeria', component: GalleryPageComponent},
     {path: 'contacto', component: ContactPageComponent},
+    {path: 'info/:subject', component: InfoPageComponent},
     {path: '**', component: NotFoundPageComponent}
 ];
 

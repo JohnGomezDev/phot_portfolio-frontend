@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PicturesService } from 'src/app/services/pictures.service';
+import { PictureModel } from '../../models/picture';
+import { global } from 'src/app/services/global';
 
 @Component({
   selector: 'app-gallery-page',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryPageComponent implements OnInit {
 
-  constructor() { }
+  public url: String;
+  public pictures: PictureModel[];
 
-  ngOnInit(): void {
+  constructor(
+    private _picturesService: PicturesService
+  ) {
+    this.url = global.url;
   }
 
+  ngOnInit(): void {
+    this.getPictures();
+  }
+
+  // Llamada al servicio para obtener imagenes
+  getPictures(): void {
+    this._picturesService.getPictures().subscribe((res) => {
+      this.pictures = res.response;
+    });
+  }
 }

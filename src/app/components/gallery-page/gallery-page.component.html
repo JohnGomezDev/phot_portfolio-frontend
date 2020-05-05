@@ -1,26 +1,8 @@
-<div id="gallery-container">
-    <div class="img-wrapper-long">
-        <img src="../../../assets/images/flo1.jpg" alt="">
-    </div>
-    <div class="img-wrapper-short">
-        <img src="../../../assets/images/flo2.jpg" alt="">
-    </div>
-    <div class="img-wrapper-long">
-        <img src="../../../assets/images/pic2.jpg" alt="">
-    </div>
-    <div class="img-wrapper-short">
-        <img src="../../../assets/images/pic1.jpg" alt="">
-    </div>
-    <div class="img-wrapper-long">
-        <img src="../../../assets/images/flo1.jpg" alt="">
-    </div>
-    <div class="img-wrapper-short">
-        <img src="../../../assets/images/flo2.jpg" alt="">
-    </div>
-    <div class="img-wrapper-long">
-        <img src="../../../assets/images/pic2.jpg" alt="">
-    </div>
-    <div class="img-wrapper-short">
-        <img src="../../../assets/images/flo2.jpg" alt="">
+<div *ngIf="pictures" id="gallery-container">
+    <!-- La clase se pone en el div de acuero a la orientacion de la imagen -->
+    <div *ngFor="let pic of pictures" 
+     [ngClass]="pic.orientation == 'long' ? 'img-wrapper-long img' : 'img-wrapper-short img'" 
+    #img>
+        <img class="image" src="{{url}}api/image/{{pic.picture}}" #img alt="" title="{{pic.orientation}}">
     </div>
 </div>
