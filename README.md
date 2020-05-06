@@ -1,6 +1,6 @@
 # Portafolio para fotografo/a
 
-Este es un portaflio orientado a un profesional de la fotografía, en el cual este podrá subir sus mejores fotografías ademas de contar con un espacio para compartir experiencias. Esta desarrollado con el framework de JavaScript Angular en conjunto con algunas librerías como anime.js, en su parte de Frontend. El backend de esta aplicación lo puedes encontrar  [aquí]().
+Este es un portaflio orientado a un profesional de la fotografía, en el cual este podrá subir sus mejores fotografías ademas de contar con un espacio para compartir experiencias. Esta desarrollado con el framework de JavaScript Angular en conjunto con algunas librerías como anime.js, en su parte de Frontend. El backend de esta aplicación lo puedes encontrar  [aquí](https://github.com/JohnGomezDev/phot_portfolio-API.git).
 
 ## Caracteristicas
 - 5 secciones (Inicio, Blog, Galería, Contacto, Información)
