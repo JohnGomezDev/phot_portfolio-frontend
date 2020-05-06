@@ -9,3 +9,4 @@ Este es un portaflio orientado a un profesional de la fotografía, en el cual es
 
 ### Nota:
 Las secciones de frontend que permiten modificar el contenido de la galería y el blog no esta desarrollada aún, de forma que estos datos se deben modificar manualmente con un entorno de desarrollo de API´s como 'Postman' o similar.
+De la misma manera cabe recalcar que el contenido de la aplicación como textos e imagenes es a modo de prueba, no es original ni pretende copiar a ningun contenido existente. Notese que mucho de este contenido es texto de prueba.
