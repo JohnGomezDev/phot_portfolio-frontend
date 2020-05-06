@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 import anime from "animejs";
@@ -10,20 +10,23 @@ import anime from "animejs";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   public title: string;
   public hideLogo: boolean;
+  public rutes: String[];
 
   constructor(
     private router: Router,
     private _titleService: Title
   ) {
-    
+    this.rutes = ['inicio', 'blog', 'galeria', 'contacto', 'info'];
   }
 
   ngOnInit(): void {
     this.setHideLogo();
     this.setTitleAtStart();
   }
+
 
   setHideLogo(): void {
     // Si estas en otra pagina diferente al index o '/' , el logo se esconde
@@ -52,10 +55,17 @@ export class AppComponent implements OnInit {
           this._titleService.setTitle(sectionName[2].replace('-', ' '));
         }
 
+        this.notFoundTitle(sectionName[1]);
         this.title = this._titleService.getTitle();
         this.animateTitleAndMain(); //animacion
       }
     });
+  }
+
+  notFoundTitle(rute: String) { //setear titulo para pagina 404
+    if(!this.rutes.includes(rute)) {
+      this._titleService.setTitle('404 - oops!');
+    }
   }
 
   animateTitleAndMain() { //animacion de entrada del titulo y seccion principal
@@ -77,6 +87,13 @@ export class AppComponent implements OnInit {
           delay: 200,
           offset: '-=1600'
         });
+  }
+
+  toggleNav() { //Mostrar y esconder nav bar para dispositivos mobiles
+    let nav = document.querySelector('nav');
+    let isDisplied = getComputedStyle(nav).display;
+    
+    nav.style.display = isDisplied == 'block' ? 'none' : 'block';
   }
 
 }

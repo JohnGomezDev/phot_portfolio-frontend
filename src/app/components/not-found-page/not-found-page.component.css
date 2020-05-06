@@ -1,0 +1,16 @@
+#not-found-container {
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#not-found-container h1 {
+    color: var(--purple);
+}
+
+#not-found-container p {
+    text-align: center;
+}

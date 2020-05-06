@@ -1,8 +1,15 @@
+<div *ngIf="!pictures || pictures.length == 0" class="charge-box">
+    <div  class="charge">
+        <div class="_90deg"></div>
+    </div>
+    <span>Cargando...</span>
+</div>
+
 <div *ngIf="pictures" id="gallery-container">
     <!-- La clase se pone en el div de acuero a la orientacion de la imagen -->
     <div *ngFor="let pic of pictures" 
      [ngClass]="pic.orientation == 'long' ? 'img-wrapper-long img' : 'img-wrapper-short img'" 
     #img>
-        <img class="image" src="{{url}}api/image/{{pic.picture}}" #img alt="" title="{{pic.orientation}}">
+        <img class="image" src="{{url}}api/image/{{pic.picture}}" #img alt="" title="{{pic.title}}">
     </div>
 </div>

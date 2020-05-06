@@ -1,5 +1,5 @@
 <div id="blog-container">
-    <div *ngIf="!postsList" class="charge-box">
+    <div *ngIf="!postsList || postsList.length == 0" class="charge-box">
         <div  class="charge">
             <div class="_90deg"></div>
         </div>

@@ -12,20 +12,43 @@
         <div class="logo-box">
             <div class="logo-div" [ngStyle]="{'display': hideLogo ? 'none' : 'block'}"></div>
             <h1 [ngStyle]="{'display': hideLogo ? 'block' : 'none'}">{{title}}</h1>
-            <div class="extra-text-box">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias possimus veniam nemo qui perferendis, Alias possimus veniam nemo qui perferendis</p>
+            <div class="extra-text-box" *ngIf="title == 'inicio'">
+                <p>Bienvenido, mi nombre es Camila Vega, fotografa profesional. 
+                   A continuación encontrarás mi portafolio y contenido relacionado.
+                </p>
+            </div>
+            <div class="extra-text-box" *ngIf="title == 'blog'">
+                <p>Este es mi blog, lo estoy acutalizando cada semana, así que pasa de vez en cuando para ver nuevo contenido.</p>
+            </div>
+            <div class="extra-text-box" *ngIf="title == 'galeria'">
+                <p>
+                    Comparto contigo algunos de mis mejores trabajos. Hey! Espero que sean de tu agrado.
+                    Si te gusta mi forma de trabajo, no dudes en contactarme.
+                </p>
+            </div>
+            <div class="extra-text-box" *ngIf="title == 'contacto'">
+                <p>
+                    Si necesitas contactarte conmigo por razones profesionales, llena el formulario y
+                    da clic en "Enviar Mensaje", me comunicaré contigo lo mas pronto posible.
+                </p>
+            </div>
+            <div class="extra-text-box" *ngIf="title == 'sobre mi' || title == 'buena vida'">
+                <p>Leé algo mas de información y contenido interesante en mi portafolio, siéntete libre de navegar por la web.</p>
+            </div>
+            <div class="extra-text-box" *ngIf="title == '404 - oops!'">
+                <p>La pagina que buscas no existe.</p>
             </div>
         </div>
         
 
-        <div class="btn-menu">
+        <div class="btn-menu" (click)="toggleNav()">
             <span>MENU</span>
         </div>
 
         <div class="media-header">
-            <a href="#"><span class="icon-facebook"></span></a>
-            <a href="#"><span class="icon-linkedin2"></span></a>
-            <a href="#"><span class="icon-instagram"></span></a>
+            <a href="https://facebook.com" target="_blank"><span class="icon-facebook"></span></a>
+            <a href="https://linkedin.com" target="_blank"><span class="icon-linkedin2"></span></a>
+            <a href="https://instagram.com" target="_blank"><span class="icon-instagram"></span></a>
         </div>
     </header>
     
@@ -35,9 +58,9 @@
 
     <footer>
         <div class="media-box purple">
-            <a href="#"><span class="icon-facebook"></span></a>
-            <a href="#"><span class="icon-linkedin2"></span></a>
-            <a href="#"><span class="icon-instagram"></span></a>
+            <a href="https://facebook.com" target="_blank"><span class="icon-facebook"></span></a>
+            <a href="https://linkedin.com" target="_blank"><span class="icon-linkedin2"></span></a>
+            <a href="https://instagram.com" target="_blank"><span class="icon-instagram"></span></a>
         </div>
         <div class="rights">
             Derechos Reservados johnGomezDev.com&copy; 2020
