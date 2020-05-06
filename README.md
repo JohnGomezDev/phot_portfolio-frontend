@@ -1,27 +1,16 @@
-# Portfolio
+title: "TyD Test"
+author: "John Gomez"
+date: "2020/05/06"
+---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+# Portafolio para fotografo/a
 
-## Development server
+Este es un portaflio orientado a un profesional de la fotografía, en el cual este podrá subir sus mejores fotografías ademas de contar con un espacio para compartir experiencias. Esta desarrollado con el framework de JavaScript Angular en conjunto con algunas librerías como anime.js, en su parte de Frontend. El backend de esta aplicación lo puedes encontrar  [aquí]().
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Caracteristicas
+- 5 secciones (Inicio, Blog, Galería, Contacto, Información)
+- Los datos del blog y la galería son tomados de una base de datos desde una API, sin embargo, datos como la sección de información podría implemetar esto sin ningun problema
+- Diseño mobile first, maquetado con HTML5 y CSS puro
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Nota:
+Las secciones de frontend que permiten modificar el contenido de la galería y el blog no esta desarrollada aún, de forma que estos datos se deben modificar manualmente con un entorno de desarrollo de API´s como 'Postman' o similar.
